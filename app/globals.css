@@ -2,32 +2,226 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,
+body,
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1520px;
+    margin: 0 auto;
+  }
+
+  .mid-container {
+    max-width: 1265px;
+    margin: 0 auto;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.animate-slide-left {
+  animation: slideLeft 20s linear infinite;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #f7f7f2;
+  min-height: 30vh;
+}
+
+.product-card {
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.check-icon {
+  font-family: Inter;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.cart-wrapper {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  transition: all 1s ease-in-out;
+}
+
+.cart-container {
+  height: 100vh;
+  width: 600px;
+  background-color: #0c0c0c;
+  float: right;
+  padding: 40px 10px;
+  position: relative;
+}
+
+.cart-heading {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  gap: 2px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.cart-heading .heading {
+  margin-left: 10px;
+}
+.cart-num-items {
+  margin-left: 10px;
+  color: #385fee;
+}
+.empty-cart {
+  margin: 40px;
+  text-align: center;
+  border:1px solid red;
+}
+.empty-cart h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.maylike-products-wrapper h2 {
+  text-align: center;
+  margin: 5px;
+  font-size: 28px;
+}
+
+.maylike-products-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px;
+}
+
+.track {
+  animation: marquee 15s linear infinite;
+  width: 100%;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  position: relative;
+  width: 200%;
+  overflow-x: hidden;
+}
+
+.hero-banner-container {
+  padding: 100px 40px;
+  background-color: #ffffff;
+  border-radius: 0;
+  position: relative;
+  height: auto;
+  line-height: 0.9;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.hero-banner-container .beats-solo {
+  font-size: 20px;
+}
+
+.hero-banner-container button {
+  border-radius: 15px;
+  padding: 15px 20px;
+  background-color: #f02d34;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 10000 !important;
+}
+
+.hero-banner-container button:hover {
+  background-color: #830004;
+}
+
+.hero-banner-container h3 {
+  font-size: 4rem;
+  margin-top: 4px;
+}
+
+.hero-banner-container h1 {
+  color: rgb(56, 56, 56);
+  font-size: 10em;
+  margin-left: -20px;
+  text-transform: uppercase;
+}
+
+.hero-banner-image {
+  position: absolute;
+  top: 0%;
+  right: 12%;
+  width: 600px;
+  height: 600px;
+}
+
+.desc {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  width: 300px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  color: #324d67;
+}
+.desc p {
+  color: #ababb3;
+  font-weight: bold;
+  text-align: end;
+}
+.desc h5 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  align-self: flex-end;
 }
