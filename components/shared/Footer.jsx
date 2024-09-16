@@ -11,41 +11,76 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <div className="bg-black h-[400px] mt-20 text-white ">
-      <footer className="mid-container mt-20">
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-col gap-3">
-            <p className="text-2xl space-x-3">Get Started</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <p className="text-2xl space-x-3">About</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-            <p className="text-gray-400">sdfsdfdf</p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <p className="text-2xl space-x-3">Connect With Us</p>
-            <div className="flex flex-row gap-10 justify-center">
-              <Link href={"/"} className="text-gray-400 text-2xl">
-                <AiOutlineFacebook />
-              </Link>
-              <Link href={"/"} className="text-gray-400 text-2xl">
-                <AiOutlineX />
-              </Link>
-              <Link href={"/"} className="text-gray-400 text-2xl">
-                <AiFillInstagram />
-              </Link>
+    <div className="bg-gray-900 h-[400px] mt-20 text-white ">
+      <footer className="bg-gray-900 text-white py-8 h-[400px]  mid-container">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between gap-8">
+            <div className="flex flex-col">
+              <h3 className="font-bold text-lg mb-4">Company</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col">
+              <h3 className="font-bold text-lg mb-4">Support</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    Help Center
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col">
+              <h3 className="font-bold text-lg mb-4">Follow Us</h3>
+              <div className="flex gap-4 justify-start">
+                <Link
+                  href="#"
+                  className="text-gray-400 text-2xl hover:text-white"
+                >
+                  <AiOutlineFacebook />
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-400 text-2xl hover:text-white"
+                >
+                  <AiOutlineX />
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-400 text-2xl hover:text-white"
+                >
+                  <AiFillInstagram />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        <p className="text-center mt-14">
-          @ 2024 copyright. All right reserved{" "}
-        </p>
       </footer>
     </div>
   )
