@@ -11,13 +11,13 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 h-[400px] mt-20 text-white ">
-      <footer className="bg-gray-900 text-white py-8 h-[400px]  mid-container">
-        <div className="container mx-auto">
+    <div className="bg-gray-900 lg:h-[300px] h-full mt-20 text-white">
+      <footer className="bg-gray-900 text-white py-8 lg:h-[300px] h-full mid-container">
+        <div className="container mx-auto mt-5">
           <div className="flex flex-col md:flex-row justify-between gap-8">
             <div className="flex flex-col">
-              <h3 className="font-bold text-lg mb-4">Company</h3>
-              <ul className="space-y-2">
+              <h3 className="font-bold text-lg mb-8">Company</h3>
+              <ul className="space-y-4">
                 <li>
                   <a href="#" className="text-gray-400 hover:text-white">
                     About Us
@@ -36,8 +36,8 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col">
-              <h3 className="font-bold text-lg mb-4">Support</h3>
-              <ul className="space-y-2">
+              <h3 className="font-bold text-lg mb-8">Support</h3>
+              <ul className="space-y-4">
                 <li>
                   <a href="#" className="text-gray-400 hover:text-white">
                     Contact Us
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col">
-              <h3 className="font-bold text-lg mb-4">Follow Us</h3>
+              <h3 className="font-bold text-lg mb-8">Follow Us</h3>
               <div className="flex gap-4 justify-start">
                 <Link
                   href="#"
