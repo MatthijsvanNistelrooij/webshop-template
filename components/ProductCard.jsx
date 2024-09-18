@@ -11,9 +11,9 @@ const ProductCard = ({ product, onAdd }) => {
   console.log(product)
 
   return (
-    <div className="group p-10 bg-white relative hover:bg-[#CBE7F6] shadow-lg min-w-[387px] w-[387px] cursor-pointer">
+    <div className="group p-10 bg-white relative hover:bg-[#a6d8c1] shadow-lg min-w-[387px] w-[387px] cursor-pointer">
       <Link href={`/product/${product.slug.current}`} className="">
-        <div className="relative bg-[#CBE7F6]  h-32 mt-40 group-hover:bg-[#2D679D] group-hover:h-72 group-hover:mt-0 flex items-center justify-center">
+        <div className="relative bg-[#5e9c7f]  h-32 mt-40 group-hover:bg-[#5e9c7f] group-hover:h-72 group-hover:mt-0 flex items-center justify-center">
           <Image
             src={urlFor(product.image[0]).url()}
             alt={"capsule_bottle"}
@@ -25,13 +25,13 @@ const ProductCard = ({ product, onAdd }) => {
       </Link>
 
       <div className="flex flex-col ">
-        <h1 className="text-[#1E285F] text-2xl font-bold mt-2">
+        <h1 className="text-black text-2xl font-bold mt-2">
           {product.name}
         </h1>
         <div className="flex flex-row justify-between mt-10">
-          <h1 className="text-[#006CEB] font-bold mt-4">{product.price} ,-</h1>
+          <h1 className="text-black font-bold mt-4">{product.price} ,-</h1>
           <button
-            className="bg-[#2D679D] flex flex-row p-2 gap-3 text-white text-4xl"
+            className="bg-[#a6d8c1] flex flex-row p-2 gap-3 text-white text-4xl"
             onClick={() => onAdd(product, 1)}
           >
             <AiFillPlusSquare />

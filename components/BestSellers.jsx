@@ -6,12 +6,12 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 
 const BestSellers = ({ products, title, wordsToHighlight }) => {
   const styledTitle = title.split(new RegExp(`(${wordsToHighlight})`, "gi"))
-  const highlightColor = "#006CEB"
+  const highlightColor = "#a6d8c1"
 
   return (
     <section className="max-container">
       <div className="mid-container overflow-hidden">
-        {/* <h1 className="text-6xl font-semibold text-[#1E285F] leading-tight w-full ">
+        <h1 className="text-6xl font-light text-black leading-tight w-full ">
           {styledTitle.map((part, index) =>
             part.toLowerCase() === wordsToHighlight.toLowerCase() ? (
               <span key={index} style={{ color: highlightColor }}>
@@ -21,7 +21,7 @@ const BestSellers = ({ products, title, wordsToHighlight }) => {
               part
             )
           )}
-        </h1> */}
+        </h1>
         <div className="marquee">
           <div className="maylike-products-container track ">
             {products.map((item) => (

@@ -20,8 +20,8 @@ const Hero = ({ heroBanner }) => {
       <div className="hero-banner-container h-full">
         <div>
           <p className="beats-solo">{heroBanner?.smallText}</p>
-          <h3>{heroBanner?.midText}</h3>
-          <h1>{heroBanner?.largeText1}</h1>
+          <h3 className="text-black">{heroBanner?.midText}</h3>
+          <h1 className="text-black">{heroBanner?.largeText1}</h1>
           {heroBanner ? (
             <img
               src={urlFor(heroBanner.image)}
@@ -32,11 +32,9 @@ const Hero = ({ heroBanner }) => {
             <div>Image</div>
           )}
           <div>
-            <Link href={`/products`}>
-              <button type="button" className="flex flex-row gap-3">
-                {heroBanner.buttonText}
-                <AiOutlineArrowRight />
-              </button>
+            <Link href={`/products`} className="bg-[#a6d8c1] hover:bg-[#5e9c7f] flex flex-row w-40 p-5 -ml-3 gap-2">
+              {heroBanner.buttonText}
+              <AiOutlineArrowRight />
             </Link>
             <div className="desc">
               <h5>Description</h5>

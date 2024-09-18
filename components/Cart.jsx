@@ -48,7 +48,7 @@ const Cart = () => {
 
   return (
     <div className="cart-wrapper" ref={cartRef}>
-      <div className="h-[100vh] w-[40vw] float-end bg-[#2e2e2e] p-5 pt-1 overflow-scroll text-white">
+      <div className="h-[100vh] w-[40vw] float-end bg-white p-5 pt-1 overflow-scroll text-black">
         <button
           type="button"
           className="w-full mb-1 "
@@ -79,10 +79,10 @@ const Cart = () => {
         <div className="">
           {cartItems.length >= 1 && (
             <div className="flex w-full justify-between mb-10 mt-10">
-              <span className="text-white font-bold text-3xl">
+              <span className="text-black font-bold text-3xl">
                 Winkelmandje
               </span>
-              <span className="flex font-bold text-gray-500 mt-3">
+              <span className="flex font-bold text-black mt-3">
                 {totalQuantities} items
               </span>
             </div>
@@ -135,8 +135,8 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className="">
             <hr />
-            <div className="flex flex-row font-bold gap-20 text-2xl p-10 pl-5">
-              <h3>TOTAAL</h3>
+            <div className="flex flex-row font-bold gap-20 text-2xl p-10 pl-5 justify-end">
+              <h3 className="tracking-tighter">TOTAAL</h3>
               <h3>€ {totalPrice},00</h3>
             </div>
             <div className="flex justify-center">

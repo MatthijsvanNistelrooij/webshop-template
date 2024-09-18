@@ -70,9 +70,9 @@ const ProductDetails = ({ params }) => {
 
   return (
     <>
-      <section className="mid-container mt-20 ">
+      <section className="mid-container mt-20">
         <div className="flex flex-col lg:flex-row gap-5 p-4 lg:p-0">
-          <div className="flex-1 w-full lg:min-w-[744px] bg-gray-200 p-4">
+          <div className="flex-1 w-full lg:min-w-[744px] p-4">
             {image && image[index] && (
               <img
                 src={urlFor(image[index]).url()}
@@ -81,9 +81,9 @@ const ProductDetails = ({ params }) => {
               />
             )}
           </div>
-          <div className="flex flex-col w-full lg:min-w-[300px] bg-gray-100 p-4 justify-between">
+          <div className="flex flex-col w-full lg:min-w-[300px] p-4 text-black justify-between">
             <div>
-              <h2 className="text-4xl font-bold mb-4">{name}</h2>
+              <h2 className="text-4xl font-light mb-4">{name}</h2>
               <p className="flex text-sm mb-2 mt-2 gap-2">
                 <AiOutlineCheck className="check-icon" />
                 {details}
@@ -100,30 +100,30 @@ const ProductDetails = ({ params }) => {
 
             <div className="flex flex-col">
               <div className="flex items-center w-20 mb-2">
-                <div className="flex items-center justify-between flex-col">
+                <div className="flex items-center justify-between flex-row">
                   <button
-                    className="flex items-center justify-center w-8 h-8 hover:shadow-lg hover:bg-gray-200"
+                    className="flex items-center justify-center w-8 h-8 bg-[#a6d8c1] hover:shadow-lg hover:bg-[#5e9c7f]"
                     onClick={incQty}
                   >
-                    <AiOutlineArrowUp />
+                    <AiOutlinePlus />
                   </button>
                   <div className="flex items-center justify-center mx-2 ">
                     {qty}
                   </div>
                   <button
-                    className="flex items-center justify-center w-8 h-8 hover:shadow-lg hover:bg-gray-200"
+                    className="flex items-center justify-center w-8 h-8 hover:shadow-lg  bg-[#a6d8c1] hover:bg-[#5e9c7f]"
                     onClick={decQty}
                   >
-                    <AiOutlineArrowDown />
+                    -
                   </button>
                 </div>
               </div>
               <button
-                className="flex flex-row border border-gray-300 w-full items-center justify-between p-4 hover:bg-slate-200"
+                className="flex flex-row border w-full items-center justify-between p-4"
                 onClick={() => onAdd(product, qty)}
               >
-                <h3 className="font-bold">1KG - €{price}</h3>
-                <div className="flex flex-row items-center gap-3 font-light text-gray-400">
+                <h3 className="font-light text-xl">1KG - €{price}</h3>
+                <div className="flex flex-row items-center gap-3 font-light text-black">
                   <h2>Voeg toe</h2>
                   <AiFillPlusCircle />
                 </div>
@@ -131,7 +131,9 @@ const ProductDetails = ({ params }) => {
             </div>
           </div>
         </div>
-        <h1 className="text-white text-4xl -mb-10 mt-10 text-center">Meest verkocht:</h1>
+        <h1 className="text-white text-4xl -mb-10 mt-10 text-center">
+          Meest verkocht:
+        </h1>
         <BestSellers
           products={products}
           title={"Onze Bestsellers"}
