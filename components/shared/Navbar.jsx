@@ -21,7 +21,7 @@ const Navbar = () => {
     <div key={idx}>
       <a
         href={link.path}
-        className="flex items-center space-x-2 px-4 py-2 ml-4 text-black border border-white hover:border-black"
+        className="flex items-center font-light space-x-2 px-4 py-2 ml-4 text-black border border-white hover:border-black"
       >
         {link.name}
       </a>
@@ -29,7 +29,7 @@ const Navbar = () => {
   ))
 
   return (
-    <header className="w-full p-6 bg-white h-[116px] text-white sticky top-0 z-50 border-b">
+    <header className="w-full p-6 bg-white h-[116px] text-white sticky top-0 z-50 border-b shadow-lg">
       <nav className="flex justify-between items-center mid-container bg-white">
         <Link
           href="/"
