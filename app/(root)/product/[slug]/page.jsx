@@ -70,7 +70,7 @@ const ProductDetails = ({ params }) => {
 
   return (
     <>
-      <section className="mid-container mt-20">
+      <section className="mid-container mt-10">
         <div className="flex flex-col lg:flex-row gap-5 p-4 lg:p-0">
           <div className="flex-1 w-full lg:min-w-[744px] p-4">
             {image && image[index] && (
@@ -122,7 +122,7 @@ const ProductDetails = ({ params }) => {
                 className="flex flex-row border w-full items-center justify-between p-4"
                 onClick={() => onAdd(product, qty)}
               >
-                <h3 className="font-light text-xl">1KG - €{price}</h3>
+                <h3 className="font-light text-xl"> €{price}</h3>
                 <div className="flex flex-row items-center gap-3 font-light text-black">
                   <h2>Voeg toe</h2>
                   <AiFillPlusCircle />

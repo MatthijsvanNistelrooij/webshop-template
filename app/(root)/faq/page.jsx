@@ -1,5 +1,9 @@
 import React from "react"
-import { stock_party_2, stock_party_3 } from "../../../public/assets/images"
+import {
+  stock_party_2,
+  stock_party_3,
+  stock_party_5,
+} from "../../../public/assets/images"
 import Image from "next/image"
 
 const Faq = () => {
@@ -21,7 +25,7 @@ const Faq = () => {
         </div>
       </div>
       <div className="relative mt-10">
-        <Image src={stock_party_2} className="w-full flex " alt="logo" />
+        <Image src={stock_party_5} className="w-full flex " alt="logo" />
         <div className="absolute left-0 top-1/2 bg-white w-1/2 p-10 ">
           <p className="text-4xl font-light text-[#5e9c7f] mb-4">Lorem Ipsum</p>
           <p className="text-sm text-[#5e9c7f]">
