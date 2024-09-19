@@ -102,19 +102,19 @@ const ProductDetails = ({ params }) => {
               <div className="flex items-center w-20 mb-2">
                 <div className="flex items-center justify-between flex-row">
                   <button
-                    className="flex items-center justify-center w-8 h-8 bg-[#a6d8c1] hover:shadow-lg hover:bg-[#5e9c7f]"
-                    onClick={incQty}
+                    className="flex items-center justify-center w-8 h-8 hover:shadow-lg  bg-[#a6d8c1] hover:bg-[#5e9c7f]"
+                    onClick={decQty}
                   >
-                    <AiOutlinePlus />
+                    -
                   </button>
                   <div className="flex items-center justify-center mx-2 ">
                     {qty}
                   </div>
                   <button
-                    className="flex items-center justify-center w-8 h-8 hover:shadow-lg  bg-[#a6d8c1] hover:bg-[#5e9c7f]"
-                    onClick={decQty}
+                    className="flex items-center justify-center w-8 h-8 bg-[#a6d8c1] hover:shadow-lg hover:bg-[#5e9c7f]"
+                    onClick={incQty}
                   >
-                    -
+                    <AiOutlinePlus />
                   </button>
                 </div>
               </div>
