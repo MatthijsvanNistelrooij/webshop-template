@@ -16,7 +16,7 @@ const Hero = ({ heroBanner }) => {
   console.log("heroBanner", heroBanner)
 
   return (
-    <section className="p-5 lg:p-0 mid-container my-20">
+    <section className="lg:p-0 mid-container">
       <div className="hero-banner-container h-full">
         <div>
           <p className="beats-solo">{heroBanner?.smallText}</p>
