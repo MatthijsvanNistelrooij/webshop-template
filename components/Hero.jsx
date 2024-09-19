@@ -32,9 +32,11 @@ const Hero = ({ heroBanner }) => {
             <div>Image</div>
           )}
           <div>
-            <Link href={`/products`} className="bg-[#a6d8c1] hover:bg-[#5e9c7f] flex flex-row w-40 p-5 -ml-3 gap-2">
-              {heroBanner.buttonText}
-              <AiOutlineArrowRight />
+            <Link href={`/products`} className="bg-black">
+              <button className="flex flex-row gap-3 bg-[#a6d8c1] hover:shadow-lg hover:bg-[#5e9c7f]]">
+                {heroBanner.buttonText}
+                <AiOutlineArrowRight />
+              </button>
             </Link>
             <div className="desc">
               <h5>Description</h5>

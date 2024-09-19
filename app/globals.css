@@ -108,7 +108,7 @@ body,
 .empty-cart {
   margin: 40px;
   text-align: center;
-  border:1px solid red;
+  border: 1px solid red;
 }
 .empty-cart h3 {
   font-weight: 600;
@@ -168,10 +168,10 @@ body,
 }
 
 .hero-banner-container button {
-  border-radius: 15px;
+
   padding: 15px 20px;
-  background-color: #f02d34;
-  color: white;
+  background-color: #a6d8c1;
+  color: black;
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -181,7 +181,7 @@ body,
 }
 
 .hero-banner-container button:hover {
-  background-color: #830004;
+  background-color: #5e9c7f;
 }
 
 .hero-banner-container h3 {
@@ -190,7 +190,7 @@ body,
 }
 
 .hero-banner-container h1 {
-  color: rgb(56, 56, 56);
+  color: #5e9c7f;
   font-size: 10em;
   margin-left: -20px;
   text-transform: uppercase;
@@ -212,13 +212,15 @@ body,
   line-height: 1.3;
   display: flex;
   flex-direction: column;
-  color: #324d67;
+  color: black;
 }
+
 .desc p {
-  color: #ababb3;
-  font-weight: bold;
+  color: black;
+
   text-align: end;
 }
+
 .desc h5 {
   margin-bottom: 12px;
   font-weight: 700;
