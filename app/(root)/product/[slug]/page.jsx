@@ -107,7 +107,7 @@ const ProductDetails = ({ params }) => {
                   >
                     -
                   </button>
-                  <div className="flex items-center justify-center mx-2 ">
+                  <div className="flex items-center justify-center mx-2 w-10 ">
                     {qty}
                   </div>
                   <button
