@@ -99,35 +99,35 @@ const ProductDetails = ({ params }) => {
             </div>
 
             <div className="flex flex-col">
-              <div className="flex items-center w-20 mb-2">
+            <h3 className="font-light text-5xl text-[#a6d8c1] mb-10"> €{price}</h3>
+              <div className="flex items-center mb-2 w-full">
                 <div className="flex items-center justify-between flex-row">
                   <button
-                    className="flex items-center justify-center w-8 h-8 hover:shadow-lg  bg-[#a6d8c1] hover:bg-[#5e9c7f]"
+                    className="flex items-center justify-center w-12 h-12 hover:shadow-lg  bg-[#a6d8c1] hover:bg-[#5e9c7f]"
                     onClick={decQty}
                   >
                     -
                   </button>
-                  <div className="flex items-center justify-center mx-2 w-10 ">
+                  <div className="flex items-center justify-center mx-2 w-10">
                     {qty}
                   </div>
                   <button
-                    className="flex items-center justify-center w-8 h-8 bg-[#a6d8c1] hover:shadow-lg hover:bg-[#5e9c7f]"
+                    className="flex items-center justify-center w-12 h-12 bg-[#a6d8c1] hover:shadow-lg hover:bg-[#5e9c7f]"
                     onClick={incQty}
                   >
                     <AiOutlinePlus />
                   </button>
                 </div>
+                
+                <button
+                  className="border w-full ml-3 h-full flex flex-row justify-between p-3 px-5 hover:bg-[#a6d8c1]"
+                  onClick={() => onAdd(product, qty)}
+                >
+                  <h2 className="self-center">Voeg toe</h2>
+                  <AiFillPlusCircle className="self-center" />
+                </button>
               </div>
-              <button
-                className="flex flex-row border w-full items-center justify-between p-4"
-                onClick={() => onAdd(product, qty)}
-              >
-                <h3 className="font-light text-xl"> €{price}</h3>
-                <div className="flex flex-row items-center gap-3 font-light text-black">
-                  <h2>Voeg toe</h2>
-                  <AiFillPlusCircle />
-                </div>
-              </button>
+  
             </div>
           </div>
         </div>
