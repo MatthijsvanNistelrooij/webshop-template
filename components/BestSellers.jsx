@@ -23,7 +23,7 @@ const BestSellers = ({ products, title, wordsToHighlight }) => {
           )}
         </h1>
         <div className="marquee">
-          <div className="maylike-products-container track ">
+          <div className="maylike-products-container track p-10">
             {products.map((item) => (
               <ProductCard key={item._id} product={item} />
             ))}

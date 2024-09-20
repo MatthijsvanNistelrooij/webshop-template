@@ -11,7 +11,7 @@ const ProductCard = ({ product, onAdd }) => {
   console.log(product)
 
   return (
-    <div className="group p-10 bg-white relative hover:bg-[#a6d8c1] shadow-lg min-w-[387px] w-[387px] cursor-pointer">
+    <div className="group p-10 bg-white relative shadow-lg min-w-[387px] w-[387px] cursor-pointer">
       <Link href={`/product/${product.slug.current}`} className="">
         <div className="relative bg-[#5e9c7f]  h-32 mt-40 group-hover:bg-[#5e9c7f] group-hover:h-72 group-hover:mt-0 flex items-center justify-center">
           <Image
