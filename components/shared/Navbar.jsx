@@ -87,7 +87,7 @@ const Navbar = () => {
           className="p-5 border flex flex-row gap-2 text-black border-white hover:border-black"
           onClick={() => setShowCart(true)}
         >
-          <AiFillShopping className="text-4xl" />
+          <AiOutlineShoppingCart className="text-4xl" />
           <span className="text-black px-3 mt-2">{totalQuantities}</span>
         </button>
 
